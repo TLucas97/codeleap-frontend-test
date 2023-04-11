@@ -56,9 +56,9 @@ function Posts() {
 
   const loadMorePosts = async (): Promise<void> => {
     setPostsLoading(true);
+
     if (isFetchingByUsername) {
       setPostsLoading(false);
-      setPageCount(10);
       return;
     }
 
@@ -87,6 +87,7 @@ function Posts() {
     setPostsLoading(true);
     const postsByUserName = await fetchPostByUsername(username);
     setPosts(postsByUserName?.results);
+    setPageCount(10);
     setPostsLoading(false);
   };
 
