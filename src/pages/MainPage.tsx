@@ -64,6 +64,12 @@ function MainPage() {
       const scrollHeight: any = element?.scrollHeight;
       const height: any = element?.clientHeight;
 
+      if (scroll > 2000) {
+        setStartScrollBtnView(true);
+      } else {
+        setStartScrollBtnView(false);
+      }
+
       if (scroll < 2000) {
         return;
       }
@@ -72,12 +78,6 @@ function MainPage() {
         dispatch({ type: 'scroll/reachedBottom' });
       } else {
         dispatch({ type: 'scroll/reset' });
-      }
-
-      if (scroll > 2000) {
-        setStartScrollBtnView(true);
-      } else {
-        setStartScrollBtnView(false);
       }
     };
 
@@ -98,17 +98,19 @@ function MainPage() {
 
   return (
     <>
-      <div className="border w-full h-full flex items-center justify-center">
+      <div className="border w-full h-full flex items-center justify-center animate-fadeIn">
         <div
-          className="w-[800px] h-[96%] border bg-ghost shadow-xl overflow-scroll overflow-x-hidden"
+          className="card:w-[800px] w-full h-full card:h-[96%] border bg-ghost shadow-xl overflow-scroll overflow-x-hidden"
           ref={scrollRef}
           onScroll={handleScroll}
         >
-          <div className="w-[793px] z-50 h-[80px] bg-primary text-white flex justify-between items-center fixed">
-            <span className="ml-6 font-bold text-[22px]">CodeLeap Network {`( ${currentUser || 'Username'} )`}</span>
+          <div className="w-[98%] card:w-[793px] z-50 h-[80px] bg-primary text-white flex justify-between items-center fixed">
+            <span className="ml-6 font-bold card:text-[22px] text-[14px] smaller:block flex flex-col">
+              CodeLeap Network <span>{`( ${currentUser || 'Username'} )`}</span>
+            </span>
             <div className="mr-6 flex space-x-4">
               <div className="flex space-x-2 items-center justify-center">
-                <p className="font-semibold">{userPostsOnly ? 'My posts' : 'All posts'}</p>
+                <p className="font-semibold text-[12px] card:text-[16px]">{userPostsOnly ? 'My posts' : 'All posts'}</p>
                 <ToggleSwitch onClick={handleToggle} />
               </div>
               {startScrollBtnView && (
@@ -137,7 +139,7 @@ function MainPage() {
       </div>
       <Modal isOn={logoutModal}>
         <div className="m-5 flex flex-col justify-between h-[70%]">
-          <span className="font-bold text-[22px]">Confirm logout</span>
+          <span className="font-bold text-[22px] mb-4 card:mb-0">Confirm logout</span>
           <div className="flex justify-end items-end space-x-4">
             <Button theme="ghost" onClick={() => setLogoutModal(false)}>
               Cancel

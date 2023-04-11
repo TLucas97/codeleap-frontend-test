@@ -42,10 +42,10 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full flex justify-center items-center">
+      <div className="w-full h-full flex justify-center items-center animate-fadeIn">
         <BaseCard type="basic" content="" size="small">
           <div className="m-7 flex flex-col space-y-5">
-            <span className="font-bold text-[22px]">Welcome to CodeLeap network!</span>
+            <span className="font-bold text-[16px] card:text-[22px]">Welcome to CodeLeap network!</span>
             <div className="flex flex-col space-y-3">
               <FormField label="Please enter your username" onChange={handleUsernameChange} value={username} />
               <div className="flex space-x-4 justify-end items-end">

@@ -251,7 +251,7 @@ function Posts() {
       </div>
       <Modal isOn={isDeleting}>
         <div className="m-5 h-[70%] flex justify-between flex-col">
-          <span className="font-bold text-[22px]">Are you sure you want to delete this item?</span>
+          <span className="font-bold text-[16px] card:text-[22px] mb-4 card:mb-0">Are you sure you want to delete this item?</span>
           <div className="flex space-x-4 items-end justify-end">
             <Button theme="ghost" onClick={closeModal}>
               Cancel

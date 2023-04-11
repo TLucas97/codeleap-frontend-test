@@ -34,7 +34,7 @@ function SnackBar({ message, theme, duration, isOpen }: SnackBarProps) {
     <>
       {visible && (
         <button
-          className={`absolute top-0 right-0 mt-7 mr-7 p-3 rounded-lg ${themes[theme]} text-white font-bold animate-zoomIn`}
+          className={`z-[100] absolute top-0 right-0 left-0 w-[50%] m-auto mt-5 card:right-0 card:left-auto card:mr-7 p-1 card:p-3 rounded-lg ${themes[theme]} text-white font-bold animate-zoomIn`}
           onClick={() => setVisible(false)}
         >
           {message}

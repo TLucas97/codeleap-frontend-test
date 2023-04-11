@@ -15,8 +15,8 @@ type BaseCardProps = {
 };
 
 const sizes = {
-  small: 'w-[500px] h-[205px]',
-  medium: 'w-[752px] h-[316px]',
+  small: 'w-[90%] card:w-[500px] h-[205px]',
+  medium: 'w-[90%] card:w-[752px] h-[316px]',
 };
 
 function BaseCard({
@@ -36,7 +36,7 @@ function BaseCard({
   }
 
   return (
-    <div className="bg-ghost rounded-[16px] w-[752px] h-[316px] border-1 border-sand shadow-xl animate-zoomIn">
+    <div className="bg-ghost rounded-[16px] w-[90%] card:w-[752px] h-[316px] border-1 border-sand shadow-xl animate-zoomIn">
       <div className="w-full bg-primary h-[70px] flex items-center justify-between text-white rounded-t-[16px] border-1 border-transparent px-6">
         <span className="text-[22px] font-bold">{title}</span>
         {canInteract && (

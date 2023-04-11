@@ -2,6 +2,10 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      card: '800px',
+      smaller: '400px',
+    },
     extend: {
       colors: {
         metal: '#DDDDDD',
@@ -21,9 +25,18 @@ export default {
             scale: '1',
           },
         },
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
       },
       animation: {
         zoomIn: 'zoomIn 0.5s ease-in-out',
+        fadeIn: 'fadeIn 0.5s ease-in-out',
       },
     },
     fontFamily: {
