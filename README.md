@@ -6,6 +6,15 @@ Welcome to the Codeleap Frontend Test - React Social Media App! This is a simple
 
 To run this project locally, you need to have [yarn](https://yarnpkg.com/) installed. Once you have installed yarn, clone this repository and navigate to the project directory in your terminal. Then run:
 
+```bash
+  yarn install
+```
+Then: 
+
+```bash
+  yarn dev
+```
+
 
 This will install all the necessary dependencies required for this project. Once the installation is complete, run the following command to start the development server:
 
