@@ -5,7 +5,7 @@ import MainPage from './pages/MainPage';
 import ErrorPage from './ErrorPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { store } from './store';
+import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import './index.css';
 

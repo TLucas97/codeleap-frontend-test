@@ -38,7 +38,7 @@ function BaseCard({
   return (
     <div className="bg-ghost rounded-[16px] w-[90%] card:w-[752px] h-[316px] border-1 border-sand shadow-xl animate-zoomIn">
       <div className="w-full bg-primary h-[70px] flex items-center justify-between text-white rounded-t-[16px] border-1 border-transparent px-6">
-        <span className="text-[22px] font-bold">{title}</span>
+        <span className="text-[22px] font-bold w-[210px] text-ellipsis overflow-hidden ...">{title}</span>
         {canInteract && (
           <div className="flex space-x-5 items-center justify-center">
             <button className="hover:opacity-70 transition ease-in-out" onClick={onDelete}>

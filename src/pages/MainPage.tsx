@@ -105,7 +105,7 @@ function MainPage() {
           onScroll={handleScroll}
         >
           <div className="w-[98%] card:w-[793px] z-50 h-[80px] bg-primary text-white flex justify-between items-center fixed">
-            <span className="ml-6 font-bold card:text-[22px] text-[14px] smaller:block flex flex-col">
+            <span className="ml-6 font-bold card:text-[22px] text-[14px] card:block flex flex-col">
               CodeLeap Network <span>{`( ${currentUser || 'Username'} )`}</span>
             </span>
             <div className="mr-6 flex space-x-4">
